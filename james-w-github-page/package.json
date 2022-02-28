@@ -1,6 +1,7 @@
 {
   "name": "james-w-github-page",
   "version": "0.1.0",
+  "homepage": "james-wienecke.github.io",
   "private": true,
   "dependencies": {
     "@chakra-ui/react": "^1.8.5",
