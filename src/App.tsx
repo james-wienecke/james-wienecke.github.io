@@ -1,13 +1,17 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import {Box, VStack} from "@chakra-ui/react";
 import Header from "./components/header/Header";
+import Body from "./components/body/Body";
+import Footer from "./components/footer/Footer";
+
 
 function App() {
   return (
-    <Box>
-      <Header />
-      <h1>Testing application</h1>
-    </Box>
+    <VStack>
+      <Header/>
+      <Body/>
+      <Footer/>
+    </VStack>
   );
 }
 
