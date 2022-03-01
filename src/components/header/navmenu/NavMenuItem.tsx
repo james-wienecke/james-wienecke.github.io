@@ -3,17 +3,14 @@ import { Link as RouterLink } from "react-router-dom";
 import { Text, Link } from '@chakra-ui/react';
 
 interface props {
-  children?: React.ReactNode;
-  isLast?: boolean;
+  children: React.ReactNode;
   to?: string;
 }
 
-const NavMenuItem = ({ children, isLast, to = "/", ...rest }: props) => {
+const NavMenuItem = ({ children, to = "/"}: props) => {
   return (
     <Link as={RouterLink} to={to}>
-      <Text display="block" fontSize="lg" fontWeight="bold" {...rest}>
-        {children}
-      </Text>
+      {children}
     </Link>
   )
 }

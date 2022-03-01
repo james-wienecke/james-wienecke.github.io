@@ -1,16 +1,32 @@
 import React from "react";
-import {Flex} from "@chakra-ui/react";
-import NavMenu from "./navmenu/NavMenu";
+import {
+  Box,
+  Button,
+  Flex,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Stack,
+  Heading,
+  HStack,
+  Text
+} from "@chakra-ui/react";
+import {MdMenu} from "react-icons/md";
+import NavMenuItem from "./navmenu/NavMenuItem";
+import DesktopHeader from "./DesktopHeader";
+import MobileHeader from "./MobileHeader";
 
 function Header() {
   return (
-    <Flex as="header"
-          justifyContent={{base: "center", md: "flex-end"}}
-          justifySelf={"stretch"}
-          flexWrap="wrap"
-    >
-      <NavMenu/>
-    </Flex>
+    <Box
+      as="header"
+      px={0}
+      w={"100%"}>
+      <DesktopHeader/>
+      <MobileHeader/>
+    </Box>
   );
 }
 
