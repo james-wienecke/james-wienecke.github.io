@@ -1,12 +1,22 @@
 import React from 'react';
-import {Flex, FormControl, Switch, useColorMode} from "@chakra-ui/react";
+import {useColorMode, IconButton} from "@chakra-ui/react";
+import {MdDarkMode, MdOutlineWbSunny} from 'react-icons/md';
 
 function ColorModeToggle() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const getIcon = () => {
+    return colorMode === 'dark' ? <MdDarkMode/> : <MdOutlineWbSunny/>;
+  }
   return (
-    <FormControl>
-      <Switch id="toggle-color-mode" onChange={toggleColorMode} size="sm">Night mode</Switch>
-    </FormControl>
+    <IconButton
+      aria-label="toggle color theme"
+      icon={getIcon()}
+      onClick={toggleColorMode}
+      size="sm"
+      isRound={true}
+      mt="12px"
+      mr="12px"
+    />
   );
 }
 
