@@ -15,7 +15,7 @@ function ColorModeToggle() {
       size="sm"
       isRound={true}
       mt="12px"
-      mr="12px"
+      // mr="12px"
     />
   );
 }

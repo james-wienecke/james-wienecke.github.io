@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, VStack} from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 import Header from "./components/header/Header";
 import Body from "./components/body/Body";
 import Footer from "./components/footer/Footer";

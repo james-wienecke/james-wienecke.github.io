@@ -1,15 +1,16 @@
 import React from "react";
-import {Box} from "@chakra-ui/react";
-import ColorModeToggle from "./ColorModeToggle";
+import {Flex} from "@chakra-ui/react";
+import NavMenu from "./navmenu/NavMenu";
 
 function Header() {
   return (
-    <Box>
-      <header>
-        header
-        <ColorModeToggle/>
-      </header>
-    </Box>
+    <Flex as="header"
+          justifyContent={{base: "center", md: "flex-end"}}
+          justifySelf={"stretch"}
+          flexWrap="wrap"
+    >
+      <NavMenu/>
+    </Flex>
   );
 }
 
