@@ -1,8 +1,8 @@
 import React from "react";
 import { VStack } from "@chakra-ui/react";
 import Header from "./components/Header";
-import Body from "./components/body/Body";
-import Footer from "./components/footer/Footer";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 
 
 function App() {
