@@ -1,22 +1,23 @@
 import React from 'react';
-import {Box} from "@chakra-ui/react";
+import {Container} from "@chakra-ui/react";
+import Article from "./Article";
 
 function Body() {
 return (
-  <Box as={"main"}>
-    <section id={"top"}>
+  <Container as={"main"}>
+    <Article id={"top"}>
       brief home article
-    </section>
-    <section id={"about"}>
+    </Article>
+    <Article id={"about"}>
       about me
-    </section>
-    <section id={"work"}>
+    </Article>
+    <Article id={"work"}>
       projects and skills
-    </section>
-    <section id={"contact"}>
+    </Article>
+    <Article id={"contact"}>
       contact info
-    </section>
-  </Box>
+    </Article>
+  </Container>
 );
 }
 
