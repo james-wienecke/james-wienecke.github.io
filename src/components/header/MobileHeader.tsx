@@ -13,20 +13,19 @@ import {MdMenu} from "react-icons/md";
 import ColorModeToggle from "./navmenu/ColorModeToggle";
 import HeaderDrawer from "./HeaderDrawer";
 
-
 const MobileHeader = () => {
   const {isOpen, onOpen, onClose} = useDisclosure();
   const btnRef = React.useRef<HTMLButtonElement>(null);
 
   return (
     <Flex as={"nav"} display={{base: "flex", md: "none"}} justify={"flex-end"}>
-      <Button ref={btnRef} onClick={onOpen} as={IconButton} icon={<MdMenu/>}/>
+      <Button ref={btnRef} onClick={onOpen} as={IconButton} icon={<MdMenu/>} aria-label="Open navigation menu"/>
       <HeaderDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} footer={<ColorModeToggle/>}>
         <VStack alignItems="left">
-          <Button variant='text'>Home</Button>
-          <Button variant='text'>About</Button>
-          <Button variant='text'>Work</Button>
-          <Button variant='text'>Contact me!</Button>
+          <Button variant='outline' colorScheme="purple">Home</Button>
+          <Button variant='outline' colorScheme="purple">About</Button>
+          <Button variant='outline' colorScheme="purple">Work</Button>
+          <Button variant='solid' colorScheme="purple">Contact me!</Button>
         </VStack>
       </HeaderDrawer>
     </Flex>

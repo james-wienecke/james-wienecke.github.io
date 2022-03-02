@@ -49,7 +49,7 @@ const HeaderDrawer = ({btnRef, isOpen, onClose, children, footer}: props) => {
         <DrawerHeader my={"15px"}>
           <Text as="p">James Wienecke</Text>
         </DrawerHeader>
-        <DrawerBody>
+        <DrawerBody w={"100%"}>
           {children}
         </DrawerBody>
         <DrawerFooter>

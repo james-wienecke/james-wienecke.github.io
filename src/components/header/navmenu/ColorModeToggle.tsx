@@ -14,6 +14,8 @@ function ColorModeToggle() {
       onClick={toggleColorMode}
       size="sm"
       isRound={true}
+      variant="outline"
+      colorScheme="purple"
     />
   );
 }

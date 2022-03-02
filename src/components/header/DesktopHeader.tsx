@@ -21,6 +21,9 @@ function DesktopHeader() {
     <Flex align={"center"}
           justify={"space-between"}
           display={{ base: "none", md: "flex" }}
+          py={4}
+          pl={8}
+          pr={2}
     >
       <Flex>
         <Heading>james wienecke</Heading>
@@ -28,16 +31,16 @@ function DesktopHeader() {
 
       <HStack as="nav" spacing="5">
         <NavMenuItem>
-          <Text>Home</Text>
+          <Button variant="ghost">Home</Button>
         </NavMenuItem>
         <NavMenuItem>
-          <Text>About</Text>
+          <Button variant="ghost">About</Button>
         </NavMenuItem>
         <NavMenuItem>
-          <Text>Work</Text>
+          <Button variant="ghost">Work</Button>
         </NavMenuItem>
         <NavMenuItem>
-          <Button>Contact me!</Button>
+          <Button variant="solid" colorScheme="purple">Contact me!</Button>
         </NavMenuItem>
         <NavMenuItem>
           <ColorModeToggle/>
