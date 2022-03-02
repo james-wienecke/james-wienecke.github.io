@@ -9,7 +9,7 @@ interface props {
 
 const NavMenuItem = ({ children, to = "/"}: props) => {
   return (
-    <Link as={RouterLink} to={to}>
+    <Link as={RouterLink} to={to} tabIndex={-1}>
       {children}
     </Link>
   )

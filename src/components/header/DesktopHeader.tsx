@@ -30,7 +30,7 @@ function DesktopHeader() {
       </Flex>
 
       <HStack as="nav" spacing="5">
-        <NavMenuItem>
+        <NavMenuItem to="https://www.google.com">
           <Button variant="ghost">Home</Button>
         </NavMenuItem>
         <NavMenuItem>
