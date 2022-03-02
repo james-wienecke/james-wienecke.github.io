@@ -27,10 +27,12 @@ const MobileHeader = () => {
       w={"100%"}
       bg={bgColor}
     >
+      {/* Heading area -- never collapsed */}
       <Flex>
         <Heading size={'md'} p={2}>james wienecke</Heading>
       </Flex>
       <Spacer/>
+      {/* Drawer Open button */}
       <Button
         as={IconButton}
         ref={btnRef}
@@ -38,12 +40,14 @@ const MobileHeader = () => {
         icon={<MdMenu/>}
         aria-label="Open navigation menu"
       />
+      {/* Drawer */}
       <HeaderDrawer
         btnRef={btnRef}
         isOpen={isOpen}
         onClose={onClose}
         footer={<ColorModeToggle/>}
       >
+        {/* Drawer children */}
         <VStack alignItems="left">
           <NavMenuItem to="/">
             <Button variant="outline" w={"100%"}>Home</Button>
@@ -58,6 +62,7 @@ const MobileHeader = () => {
             <Button variant="solid" colorScheme="purple"  w={"100%"}>Contact me!</Button>
           </NavMenuItem>
         </VStack>
+
       </HeaderDrawer>
     </Flex>
   );
