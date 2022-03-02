@@ -1,5 +1,4 @@
 import React from "react";
-import {Link as RouterLink} from "react-router-dom";
 import {
   Drawer,
   DrawerBody,
@@ -7,25 +6,10 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
-  Flex,
-  Button,
-  IconButton,
-  VStack,
   Text,
   DrawerFooter,
+  Divider,
 } from "@chakra-ui/react";
-import {MdMenu} from "react-icons/md";
-import ColorModeToggle from "./navmenu/ColorModeToggle";
-
-// const p = 15;
-// placement = "right",
-//   width,
-//   isOpen,
-//   children,
-//   onClose,
-//   btnRef,
-//   title = "Menu",
-//   footer,
 
 interface props {
   btnRef: React.RefObject<HTMLButtonElement>;
@@ -52,6 +36,7 @@ const HeaderDrawer = ({btnRef, isOpen, onClose, children, footer}: props) => {
         <DrawerBody w={"100%"}>
           {children}
         </DrawerBody>
+        <Divider/>
         <DrawerFooter>
           {footer}
         </DrawerFooter>

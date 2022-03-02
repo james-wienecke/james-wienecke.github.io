@@ -1,20 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Flex,
-  IconButton,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Stack,
-  Heading,
-  HStack,
-  Text
-} from "@chakra-ui/react";
-import {MdMenu} from "react-icons/md";
-import NavMenuItem from "./navmenu/NavMenuItem";
+import { Box } from "@chakra-ui/react";
 import DesktopHeader from "./DesktopHeader";
 import MobileHeader from "./MobileHeader";
 
