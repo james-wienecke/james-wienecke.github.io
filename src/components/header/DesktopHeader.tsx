@@ -11,12 +11,13 @@ import {
   Stack,
   Heading,
   HStack,
-  Text
+  Text, useColorModeValue
 } from "@chakra-ui/react";
 import NavMenuItem from "./navmenu/NavMenuItem";
 import ColorModeToggle from "./navmenu/ColorModeToggle";
 
 function DesktopHeader() {
+  const bgColor = useColorModeValue("gray.100", "purple.900");
   return (
     <Flex align={"center"}
           justify={"space-between"}
@@ -24,12 +25,13 @@ function DesktopHeader() {
           py={4}
           pl={8}
           pr={2}
+          bg={bgColor}
     >
       <Flex>
         <Heading>james wienecke</Heading>
       </Flex>
 
-      <HStack as="nav" spacing="5">
+      <HStack as="nav" spacing="1">
         <NavMenuItem to="https://www.google.com">
           <Button variant="ghost">Home</Button>
         </NavMenuItem>

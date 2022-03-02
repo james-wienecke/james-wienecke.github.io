@@ -47,7 +47,7 @@ const HeaderDrawer = ({btnRef, isOpen, onClose, children, footer}: props) => {
       <DrawerContent alignItems="center">
         <DrawerCloseButton alignSelf="end" mx={"15px"} my={"15px"}/>
         <DrawerHeader my={"15px"}>
-          <Text as="p">James Wienecke</Text>
+          <Text as="p">Navigation</Text>
         </DrawerHeader>
         <DrawerBody w={"100%"}>
           {children}

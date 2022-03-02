@@ -23,7 +23,8 @@ function Header() {
     <Box
       as="header"
       px={0}
-      w={"100%"}>
+      w={"100%"}
+    >
       <DesktopHeader/>
       <MobileHeader/>
     </Box>
