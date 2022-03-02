@@ -9,6 +9,9 @@ function Header() {
       as="header"
       px={0}
       w={"100%"}
+      id={"header"}
+      position={"sticky"}
+      top={0}
     >
       <DesktopHeader/>
       <MobileHeader/>

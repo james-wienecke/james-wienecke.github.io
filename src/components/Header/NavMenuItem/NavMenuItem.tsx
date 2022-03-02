@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { Link } from '@chakra-ui/react';
 
 interface props {
@@ -7,12 +7,16 @@ interface props {
   to?: string;
 }
 
-const NavMenuItem = ({ children, to = "/"}: props) => {
+const NavMenuItem = ({ children, to = "top"}: props) => {
   return (
-    <Link as={RouterLink}
-          to={to}
+    <Link as={ScrollLink}
           tabIndex={-1}
           _hover={{textDecoration: 'none'}}
+          to={to}
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
     >
       {children}
     </Link>

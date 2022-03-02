@@ -49,16 +49,16 @@ const MobileHeader = () => {
       >
         {/* Drawer children */}
         <VStack alignItems="left">
-          <NavMenuItem to="/">
+          <NavMenuItem to="top">
             <Button variant="outline" w={"100%"}>Home</Button>
           </NavMenuItem>
-          <NavMenuItem to="/about">
+          <NavMenuItem to="about">
             <Button variant="outline"  w={"100%"}>About</Button>
           </NavMenuItem>
-          <NavMenuItem to="/work">
+          <NavMenuItem to="work">
             <Button variant="outline"  w={"100%"}>Work</Button>
           </NavMenuItem>
-          <NavMenuItem to="/contact">
+          <NavMenuItem to="contact">
             <Button variant="solid" colorScheme="purple"  w={"100%"}>Contact me!</Button>
           </NavMenuItem>
         </VStack>

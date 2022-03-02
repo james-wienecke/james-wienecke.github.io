@@ -26,21 +26,19 @@ function DesktopHeader() {
       </Flex>
 
       <HStack as="nav" spacing="1">
-        <NavMenuItem to="/">
+        <NavMenuItem to="top">
           <Button variant="ghost">Home</Button>
         </NavMenuItem>
-        <NavMenuItem to="/about">
+        <NavMenuItem to="about">
           <Button variant="ghost">About</Button>
         </NavMenuItem>
-        <NavMenuItem to="/work">
+        <NavMenuItem to="work">
           <Button variant="ghost">Work</Button>
         </NavMenuItem>
-        <NavMenuItem to="/contact">
+        <NavMenuItem to="contact">
           <Button variant="solid" colorScheme="purple">Contact me!</Button>
         </NavMenuItem>
-        <NavMenuItem>
-          <ColorModeToggle/>
-        </NavMenuItem>
+        <ColorModeToggle/>
       </HStack>
     </Flex>
   );
