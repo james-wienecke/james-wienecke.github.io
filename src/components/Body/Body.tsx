@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box, Container, Divider, Icon, Image, Link, Text} from "@chakra-ui/react";
 import Article from "./Article";
+import GithubCard from "./GithubCard";
 import { ImGithub } from "react-icons/im";
 import {RiExternalLinkLine} from "react-icons/ri";
 
@@ -52,6 +53,8 @@ return (
         hours in just the past year to learning and implementing industry best practices and I want to spend
         thousands of hours more in the coming years.
       </Text>
+
+      <GithubCard/>
 
     </Article>
     <Article id={"work"} title={"My work"}>
