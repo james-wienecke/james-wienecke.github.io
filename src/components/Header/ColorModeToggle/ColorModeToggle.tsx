@@ -1,12 +1,12 @@
-import React from 'react';
-import {useColorMode, IconButton} from "@chakra-ui/react";
-import {MdDarkMode, MdOutlineWbSunny} from 'react-icons/md';
+import React from "react";
+import { useColorMode, IconButton } from "@chakra-ui/react";
+import { MdDarkMode, MdOutlineWbSunny } from "react-icons/md";
 
 function ColorModeToggle() {
   const { colorMode, toggleColorMode } = useColorMode();
   const getIcon = () => {
-    return colorMode === 'dark' ? <MdDarkMode/> : <MdOutlineWbSunny/>;
-  }
+    return colorMode === "dark" ? <MdDarkMode /> : <MdOutlineWbSunny />;
+  };
   return (
     <IconButton
       aria-label="toggle color theme"

@@ -15,7 +15,7 @@ function DesktopHeader() {
     <Flex
       align={"center"}
       justify={"space-between"}
-      display={{base: "none", md: "flex"}}
+      display={{ base: "none", md: "flex" }}
       py={4}
       pl={8}
       pr={2}
@@ -36,9 +36,11 @@ function DesktopHeader() {
           <Button variant="ghost">Work</Button>
         </NavMenuItem>
         <NavMenuItem to="contact">
-          <Button variant="solid" colorScheme="purple">Contact me!</Button>
+          <Button variant="solid" colorScheme="purple">
+            Contact me!
+          </Button>
         </NavMenuItem>
-        <ColorModeToggle/>
+        <ColorModeToggle />
       </HStack>
     </Flex>
   );

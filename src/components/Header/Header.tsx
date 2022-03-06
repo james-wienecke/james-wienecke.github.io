@@ -13,8 +13,8 @@ function Header() {
       position={"sticky"}
       top={0}
     >
-      <DesktopHeader/>
-      <MobileHeader/>
+      <DesktopHeader />
+      <MobileHeader />
     </Box>
   );
 }

@@ -11,10 +11,10 @@ const fetchGithub = async () => {
     console.log("using cached data");
   }
   return cached;
-}
+};
 
 const buildUser = (data: any) => {
-  console.log("building user object")
+  console.log("building user object");
   return {
     user: {
       name: data[0].actor.display_login,
@@ -27,31 +27,33 @@ const buildUser = (data: any) => {
     },
     lastCommit: {
       message: data[0].payload.commits[0].message,
-    }
-  }
-}
-
+    },
+  };
+};
 
 const makeRequest = async () => {
-  let res = await axios.get("https://hot-recondite-periodical.glitch.me/gh/events");
-  return await res.data.filter((event: { type: string; }) => event.type === "PushEvent");
-}
+  let res = await axios.get(
+    "https://hot-recondite-periodical.glitch.me/gh/events"
+  );
+  return await res.data.filter(
+    (event: { type: string }) => event.type === "PushEvent"
+  );
+};
 
 interface githubData {
   user: {
     name: string;
     url: string;
     pic: string;
-  },
+  };
   repo: {
     name: string;
     url: string;
-  },
+  };
   lastCommit: {
     message: string;
-  },
+  };
 }
 
-
-export {fetchGithub};
-export type {githubData};
+export { fetchGithub };
+export type { githubData };

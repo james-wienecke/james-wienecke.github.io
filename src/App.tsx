@@ -4,13 +4,12 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
 
-
 function App() {
   return (
     <VStack>
-      <Header/>
-      <Body/>
-      <Footer/>
+      <Header />
+      <Body />
+      <Footer />
     </VStack>
   );
 }

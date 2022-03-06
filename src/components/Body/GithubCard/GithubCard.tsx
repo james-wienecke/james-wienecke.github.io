@@ -1,16 +1,22 @@
-import React, {useEffect, useState} from "react";
-import {fetchGithub, githubData} from "../../../utils";
-import {Box, Heading, Text, Image, Spinner, Flex, Link} from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
+import { fetchGithub, githubData } from "../../../utils";
+import {
+  Box,
+  Heading,
+  Text,
+  Image,
+  Spinner,
+  Flex,
+  Link,
+} from "@chakra-ui/react";
 
 const GithubCard = () => {
-  const [ loading, setLoading ] = useState(true);
-  const [ data, setData ] = useState<githubData>({} as githubData);
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState<githubData>({} as githubData);
 
   const drawCard = () => {
     if (loading) {
-      return (
-        <Spinner size='lg' />
-      )
+      return <Spinner size="lg" />;
     } else {
       return (
         <Box>
@@ -22,29 +28,23 @@ const GithubCard = () => {
               <Image
                 src={data.user.pic}
                 alt={`${data.user.name}'s Github profile picture.`}
-                borderRadius={'full'}
-                boxSize={'50px'}
+                borderRadius={"full"}
+                boxSize={"50px"}
                 mr={4}
               />
-              <Heading size={"md"}>
-                {data.user.name}
-              </Heading>
+              <Heading size={"md"}>{data.user.name}</Heading>
             </Flex>
           </Link>
           <Link href={`https://github.com/${data.repo.name}`}>
             <Box>
-              <Heading size={"sm"}>
-                Repository: {data.repo.name}
-              </Heading>
-              <Text>
-                Commit: {data.lastCommit.message}
-              </Text>
+              <Heading size={"sm"}>Repository: {data.repo.name}</Heading>
+              <Text>Commit: {data.lastCommit.message}</Text>
             </Box>
           </Link>
         </Box>
-      )
+      );
     }
-  }
+  };
 
   useEffect(() => {
     fetchGithub().then((response) => {
@@ -58,11 +58,7 @@ const GithubCard = () => {
       setLoading(false);
     }
   }, [data]);
-  return (
-    <Box>
-      {drawCard()}
-    </Box>
-  )
-}
+  return <Box>{drawCard()}</Box>;
+};
 
 export default GithubCard;

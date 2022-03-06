@@ -19,7 +19,7 @@ interface props {
   footer: React.ReactNode;
 }
 
-const HeaderDrawer = ({btnRef, isOpen, onClose, children, footer}: props) => {
+const HeaderDrawer = ({ btnRef, isOpen, onClose, children, footer }: props) => {
   return (
     <Drawer
       isOpen={isOpen}
@@ -27,22 +27,18 @@ const HeaderDrawer = ({btnRef, isOpen, onClose, children, footer}: props) => {
       finalFocusRef={btnRef}
       placement={"right"}
     >
-      <DrawerOverlay/>
+      <DrawerOverlay />
       <DrawerContent alignItems="center">
-        <DrawerCloseButton alignSelf="end" mx={"15px"} my={"15px"}/>
+        <DrawerCloseButton alignSelf="end" mx={"15px"} my={"15px"} />
         <DrawerHeader my={"15px"}>
           <Text as="p">Navigation</Text>
         </DrawerHeader>
-        <DrawerBody w={"100%"}>
-          {children}
-        </DrawerBody>
-        <Divider/>
-        <DrawerFooter>
-          {footer}
-        </DrawerFooter>
+        <DrawerBody w={"100%"}>{children}</DrawerBody>
+        <Divider />
+        <DrawerFooter>{footer}</DrawerFooter>
       </DrawerContent>
     </Drawer>
   );
-}
+};
 
 export default HeaderDrawer;

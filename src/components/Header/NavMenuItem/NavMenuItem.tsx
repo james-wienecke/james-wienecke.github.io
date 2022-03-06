@@ -1,26 +1,27 @@
-import React from 'react';
+import React from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { Link } from '@chakra-ui/react';
+import { Link } from "@chakra-ui/react";
 
 interface props {
   children: React.ReactNode;
   to?: string;
 }
 
-const NavMenuItem = ({ children, to = "top"}: props) => {
+const NavMenuItem = ({ children, to = "top" }: props) => {
   return (
-    <Link as={ScrollLink}
-          tabIndex={-1}
-          _hover={{textDecoration: 'none'}}
-          to={to}
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
+    <Link
+      as={ScrollLink}
+      tabIndex={-1}
+      _hover={{ textDecoration: "none" }}
+      to={to}
+      spy={true}
+      smooth={true}
+      offset={-70}
+      duration={500}
     >
       {children}
     </Link>
-  )
-}
+  );
+};
 
 export default NavMenuItem;
