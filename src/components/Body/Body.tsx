@@ -1,15 +1,12 @@
 import React from "react";
 import {
   Box,
-  Container,
-  Divider,
   Icon,
   Image,
   Link,
   List,
   ListIcon,
   ListItem,
-  Spacer,
   Text,
 } from "@chakra-ui/react";
 import Article from "./Article";
@@ -70,7 +67,7 @@ const Body = () => {
           </Link>
           but I've since committed to learning modern web development
           technologies. I've immersed myself in this ever-growing niche and I'm
-          constantly expanding my knowlege and skills as the industry grows and
+          constantly expanding my knowledge and skills as the industry grows and
           innovates.
         </Text>
       </Article>

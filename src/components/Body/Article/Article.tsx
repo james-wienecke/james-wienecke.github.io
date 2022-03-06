@@ -1,13 +1,13 @@
 import React from "react";
-import { Box, Container, Flex, Heading } from "@chakra-ui/react";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 
-interface props {
+interface ArticleProps {
   children: React.ReactNode;
   id?: string;
   title: string;
 }
 
-const Article = ({ children, id, title }: props) => {
+const Article = ({ children, id, title }: ArticleProps) => {
   return (
     <Box
       maxW={{ base: "95vw", md: "75vw" }}

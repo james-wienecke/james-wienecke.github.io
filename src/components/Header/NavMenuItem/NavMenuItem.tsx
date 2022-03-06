@@ -2,12 +2,12 @@ import React from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "@chakra-ui/react";
 
-interface props {
+interface NavMenuItemProps {
   children: React.ReactNode;
   to?: string;
 }
 
-const NavMenuItem = ({ children, to = "top" }: props) => {
+const NavMenuItem = ({ children, to = "top" }: NavMenuItemProps) => {
   return (
     <Link
       as={ScrollLink}

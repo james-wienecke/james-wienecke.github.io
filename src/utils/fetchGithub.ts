@@ -4,17 +4,14 @@ let cached: githubData = {} as githubData;
 
 const fetchGithub = async () => {
   if (cached.user === undefined) {
-    console.log("fetching data");
     const data = await makeRequest();
     cached = buildUser(data);
   } else {
-    console.log("using cached data");
   }
   return cached;
 };
 
 const buildUser = (data: any) => {
-  console.log("building user object");
   return {
     user: {
       name: data[0].actor.display_login,
@@ -40,7 +37,7 @@ const makeRequest = async () => {
   );
 };
 
-interface githubData {
+export interface githubData {
   user: {
     name: string;
     url: string;
@@ -56,4 +53,4 @@ interface githubData {
 }
 
 export { fetchGithub };
-export type { githubData };
+// export type { githubData };

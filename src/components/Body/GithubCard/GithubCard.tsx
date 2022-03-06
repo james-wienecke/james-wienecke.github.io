@@ -48,7 +48,6 @@ const GithubCard = () => {
 
   useEffect(() => {
     fetchGithub().then((response) => {
-      console.log(response);
       setData(response);
     });
   }, []);

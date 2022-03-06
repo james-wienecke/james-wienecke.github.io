@@ -11,7 +11,7 @@ import {
   Divider,
 } from "@chakra-ui/react";
 
-interface props {
+interface DrawerProps {
   btnRef: React.RefObject<HTMLButtonElement>;
   isOpen: boolean;
   onClose: () => void;
@@ -19,7 +19,7 @@ interface props {
   footer: React.ReactNode;
 }
 
-const HeaderDrawer = ({ btnRef, isOpen, onClose, children, footer }: props) => {
+const HeaderDrawer = ({ btnRef, isOpen, onClose, children, footer }: DrawerProps) => {
   return (
     <Drawer
       isOpen={isOpen}
