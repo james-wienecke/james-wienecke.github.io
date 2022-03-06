@@ -1,7 +1,7 @@
 {
   "name": "james-w-github-page",
   "version": "0.1.0",
-  "homepage": "james-wienecke.github.io",
+  "homepage": "https://james-wienecke.github.io",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^1.1.7",
