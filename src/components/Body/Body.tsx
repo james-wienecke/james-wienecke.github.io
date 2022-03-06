@@ -1,9 +1,11 @@
 import React from 'react';
-import {Box, Container, Divider, Icon, Image, Link, Spacer, Text} from "@chakra-ui/react";
+import {Box, Container, Divider, Icon, Image, Link, List, ListIcon, ListItem, Spacer, Text} from "@chakra-ui/react";
 import Article from "./Article";
 import GithubCard from "./GithubCard";
 import { ImGithub } from "react-icons/im";
 import {RiExternalLinkLine} from "react-icons/ri";
+import {IoLogoLinkedin} from "react-icons/io";
+import {MdEmail} from "react-icons/md";
 
 const Body = () => {
 return (
@@ -56,14 +58,30 @@ return (
         as the industry grows and innovates.
       </Text>
     </Article>
-    <Article id={"githubCard"} title={"Latest Work:"}>
+    <Article id={"githubCard"} title={"Latest activity"}>
       <GithubCard/>
     </Article>
     <Article id={"work"} title={"My work"}>
       projects and skills
     </Article>
     <Article id={"contact"} title={"Get in touch!"}>
-      contact info
+      <List spacing={3}>
+        <ListItem>
+          <Link href="https://www.linkedin.com/in/james-a-wienecke/">
+            <ListIcon as={IoLogoLinkedin}/>LinkedIn
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="https://github.com/james-wienecke">
+            <ListIcon as={ImGithub}/>Github
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link href="mailto:james.a.wienecke@gmail.com">
+            <ListIcon as={MdEmail}/>E-mail
+          </Link>
+        </ListItem>
+      </List>
     </Article>
   </Box>
 );

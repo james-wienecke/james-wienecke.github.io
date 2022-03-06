@@ -14,16 +14,14 @@ const GithubCard = () => {
     } else {
       return (
         <Box>
-          {/*<Text>Repo: {data.repo.name}</Text>*/}
-          {/*<Text>Message: {data.lastCommit.message}</Text>*/}
           <Link
             href={`https://github.com/${data.user.name}`}
-            aria-label={`Link to ${data.user.name}'s GitHub user page.`}
+            aria-label={`Link to ${data.user.name}'s Github user page.`}
           >
             <Flex align={"center"}>
               <Image
                 src={data.user.pic}
-                alt={`${data.user.name}'s GitHub profile picture.`}
+                alt={`${data.user.name}'s Github profile picture.`}
                 borderRadius={'full'}
                 boxSize={'50px'}
                 mr={4}
