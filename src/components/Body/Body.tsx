@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Container, Divider, Icon, Image, Link, Text} from "@chakra-ui/react";
+import {Box, Container, Divider, Icon, Image, Link, Spacer, Text} from "@chakra-ui/react";
 import Article from "./Article";
 import GithubCard from "./GithubCard";
 import { ImGithub } from "react-icons/im";
@@ -46,16 +46,18 @@ return (
         of building software to be incredibly fulfilling and engaging.
         <br/>
         I've dabbled in a dozen or so languages since then,
-        from C++ to JavaScript to <Link href="https://ksp-kos.github.io/KOS/" isExternal>
-          an obscure scripting language for the video game "Kerbal Space Program", <Icon as={RiExternalLinkLine} mr={2}/>
+        from C++ to JavaScript to
+        <Link href="https://ksp-kos.github.io/KOS/" isExternal>
+          an obscure scripting language for the video game "Kerbal Space Program",
+          <Icon as={RiExternalLinkLine} mr={2}/>
         </Link>
-        but I've since committed to learning modern web development technologies. I've spent hundreds and hundreds of
-        hours in just the past year to learning and implementing industry best practices and I want to spend
-        thousands of hours more in the coming years.
+        but I've since committed to learning modern web development technologies.
+        I've immersed myself in this ever-growing niche and I'm constantly expanding my knowlege and skills
+        as the industry grows and innovates.
       </Text>
-
+    </Article>
+    <Article id={"githubCard"} title={"Latest Work:"}>
       <GithubCard/>
-
     </Article>
     <Article id={"work"} title={"My work"}>
       projects and skills
